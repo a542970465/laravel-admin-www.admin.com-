@@ -13,5 +13,9 @@ Route::group([
     $router->get('/', 'HomeController@index');
 
     $router->resource('movie', MovieController::class);
+    $router->resource('profile', ProfileController::class);
+    $router->resource('users', UserController::class);
+//    $router->post('users','UserController@')
+
 
 });

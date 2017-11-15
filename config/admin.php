@@ -68,16 +68,11 @@ return [
      */
     'upload'  => [
 
-          'admin' => [
-              'driver' => 'local',
-              'root' => public_path('uploads'),
-              'visibility' => 'public',
-              'url' => env('APP_URL').'/uploads',
-        ],
+        'disk' => 'admin',
 
         'directory'  => [
-            'image'  => public_path('uploads/images'),
-            'file'   => public_path('uploads/files'),
+            'image'  => 'images',
+            'file'  => 'files',
         ],
     ],
 

@@ -17,5 +17,10 @@
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
-
 Encore\Admin\Form::forget(['map', 'editor']);
+
+\Encore\Admin\Grid\Column::extend('color', function ($value, $color) {
+   return "<span style='color: $color'>$value</span>";
+});
+
+\Encore\Admin\Grid\Column::extend('popover',\App\Admin\Extensions\Popover::class);
